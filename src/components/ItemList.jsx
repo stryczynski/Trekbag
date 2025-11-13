@@ -1,3 +1,3 @@
 export default function ItemList() {
-  return <div>ItemList</div>
+  return <div>ItemList</div>;
 }

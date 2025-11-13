@@ -1,8 +1,8 @@
-import BackgroundHeading from "./BackgroundHeading"
-import Footer from "./Footer"
-import Header from "./Header"
-import ItemList from "./ItemList"
-import Sidebar from "./Sidebar"
+import BackgroundHeading from "./BackgroundHeading";
+import Footer from "./Footer";
+import Header from "./Header";
+import ItemList from "./ItemList";
+import Sidebar from "./Sidebar";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
 
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
