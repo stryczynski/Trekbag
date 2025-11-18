@@ -1,26 +1,14 @@
-const initialItems = [
-  {
-    name: "good mood",
-    packed: true,
-  },
-  {
-    name: "passport",
-    packed: false,
-  },
-  {
-    name: "phone charger",
-    packed: false,
-  },
-];
+import { useState } from "react";
+import { initialItems } from "../lib/constants";
 
 export default function ItemList() {
+  const [items, setItems] = useState(initialItems);
+
   return (
     <ul>
-      {
-        initialItems.map((item) => (
-          <Item key={item.name} item={item} />
-        ))
-      }
+      {items.map((item) => (
+        <Item key={item.id} item={item} />
+      ))}
     </ul>
   );
 }
@@ -29,8 +17,10 @@ const Item = ({ item }) => {
   return (
     <li className="item">
       <label>
-        <input type="checkbox" /> {item.name}
+        <input checked={item.packed} type="checkbox" /> {item.name}
       </label>
+
+      <button>❌</button>
     </li>
   );
 };
